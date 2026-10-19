@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BD802834809E431A438EBDB /* ProviderSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD42438D937FCBF16E0787 /* ProviderSource.swift */; };
+		34DAC84CA74EBCF26EC4B54C /* OpenFreezeCameraExtension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = E1F4BA58FD342C56008CE109 /* OpenFreezeCameraExtension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5A8686D6A4CEB48F4A910A71 /* StateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04283BEB530A44FB31B9F4D /* StateStore.swift */; };
+		670A72DC44F58144472AD89D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49409353E8FC50AA968F31B0 /* main.swift */; };
+		6B9D90A432D406D31E41EE4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0698FEF4563EC51A36144173 /* ContentView.swift */; };
+		77A8885EBF2E83E43C475DEB /* OpenFreezeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92990506127C818E991D68 /* OpenFreezeApp.swift */; };
+		91644536ED898339E557C662 /* StreamSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE9F75CED29F9881DC5F6B /* StreamSource.swift */; };
+		A280272DC16F3BA81FC45A92 /* DeviceSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81070667EC400E38D8E7567 /* DeviceSource.swift */; };
+		B74DBECCB1F754ED815C035F /* ExtensionInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B368F661F44AE7B8381DAF /* ExtensionInstaller.swift */; };
+		E9B64F0B6117C6A0B3C6B0DC /* FrameProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACF5C21A8F0A286C2051220 /* FrameProducer.swift */; };
+		FA140FD8BCCA3BD1258B2FDD /* SinkPump.swift in Sources */ = {isa = PBXBuildFile; fileRef = C849F671AEB551F087B4E419 /* SinkPump.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6F331E016D5812A0ACBD5A0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A677B8E814C9052A35EFA8A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82B29A9A48405FE737FB2607;
+			remoteInfo = OpenFreezeCameraExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5315C6971CAD850D9457798A /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				34DAC84CA74EBCF26EC4B54C /* OpenFreezeCameraExtension.systemextension in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0698FEF4563EC51A36144173 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3A063E43BEA949BE28F32DD8 /* OpenFreeze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenFreeze.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ACF5C21A8F0A286C2051220 /* FrameProducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameProducer.swift; sourceTree = "<group>"; };
+		47FD42438D937FCBF16E0787 /* ProviderSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderSource.swift; sourceTree = "<group>"; };
+		49409353E8FC50AA968F31B0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		55B368F661F44AE7B8381DAF /* ExtensionInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionInstaller.swift; sourceTree = "<group>"; };
+		947488398CE5A1E22F50895D /* OpenFreeze.build.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenFreeze.build.entitlements; sourceTree = "<group>"; };
+		AF92990506127C818E991D68 /* OpenFreezeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFreezeApp.swift; sourceTree = "<group>"; };
+		B04283BEB530A44FB31B9F4D /* StateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateStore.swift; sourceTree = "<group>"; };
+		C849F671AEB551F087B4E419 /* SinkPump.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinkPump.swift; sourceTree = "<group>"; };
+		E1F4BA58FD342C56008CE109 /* OpenFreezeCameraExtension.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = OpenFreezeCameraExtension.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0BE9F75CED29F9881DC5F6B /* StreamSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamSource.swift; sourceTree = "<group>"; };
+		F81070667EC400E38D8E7567 /* DeviceSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSource.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		7C022398B32EAD18EDBA2CFB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F81070667EC400E38D8E7567 /* DeviceSource.swift */,
+				49409353E8FC50AA968F31B0 /* main.swift */,
+				47FD42438D937FCBF16E0787 /* ProviderSource.swift */,
+				F0BE9F75CED29F9881DC5F6B /* StreamSource.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A359062648FC46806E0E546E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0698FEF4563EC51A36144173 /* ContentView.swift */,
+				55B368F661F44AE7B8381DAF /* ExtensionInstaller.swift */,
+				3ACF5C21A8F0A286C2051220 /* FrameProducer.swift */,
+				947488398CE5A1E22F50895D /* OpenFreeze.build.entitlements */,
+				AF92990506127C818E991D68 /* OpenFreezeApp.swift */,
+				C849F671AEB551F087B4E419 /* SinkPump.swift */,
+				B04283BEB530A44FB31B9F4D /* StateStore.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CCFE13F4C0E917948F70F32B = {
+			isa = PBXGroup;
+			children = (
+				A359062648FC46806E0E546E /* App */,
+				7C022398B32EAD18EDBA2CFB /* Extension */,
+				CD107BEEA065D22F8015062B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD107BEEA065D22F8015062B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A063E43BEA949BE28F32DD8 /* OpenFreeze.app */,
+				E1F4BA58FD342C56008CE109 /* OpenFreezeCameraExtension.systemextension */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		82B29A9A48405FE737FB2607 /* OpenFreezeCameraExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8896FF5C6FB11A7414EF2EC2 /* Build configuration list for PBXNativeTarget "OpenFreezeCameraExtension" */;
+			buildPhases = (
+				32142A01016CAFD762321049 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenFreezeCameraExtension;
+			packageProductDependencies = (
+			);
+			productName = OpenFreezeCameraExtension;
+			productReference = E1F4BA58FD342C56008CE109 /* OpenFreezeCameraExtension.systemextension */;
+			productType = "com.apple.product-type.system-extension";
+		};
+		88851AB4E7608E41B8C279D2 /* OpenFreeze */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EDDC80C8FFC494A5C41C60E /* Build configuration list for PBXNativeTarget "OpenFreeze" */;
+			buildPhases = (
+				373DCEDDCADFE8634988ABA0 /* Sources */,
+				5315C6971CAD850D9457798A /* Embed System Extensions */,
+				B4B4F3B40BA2B5639BA97D80 /* Embed Camera System Extension */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21CF440E3F73E597F16A6767 /* PBXTargetDependency */,
+			);
+			name = OpenFreeze;
+			packageProductDependencies = (
+			);
+			productName = OpenFreeze;
+			productReference = 3A063E43BEA949BE28F32DD8 /* OpenFreeze.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A677B8E814C9052A35EFA8A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					82B29A9A48405FE737FB2607 = {
+						DevelopmentTeam = 2KJ8W6N44B;
+						ProvisioningStyle = Manual;
+					};
+					88851AB4E7608E41B8C279D2 = {
+						DevelopmentTeam = 2KJ8W6N44B;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 893D3182905A93611479ACD6 /* Build configuration list for PBXProject "OpenFreeze" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CCFE13F4C0E917948F70F32B;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CD107BEEA065D22F8015062B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88851AB4E7608E41B8C279D2 /* OpenFreeze */,
+				82B29A9A48405FE737FB2607 /* OpenFreezeCameraExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B4B4F3B40BA2B5639BA97D80 /* Embed Camera System Extension */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Camera System Extension";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nEXT_BUNDLE=$(ls -d \"${BUILT_PRODUCTS_DIR}\"/*.systemextension 2>/dev/null | head -1)\nif [ -z \"$EXT_BUNDLE\" ]; then echo \"warning: no .systemextension found in ${BUILT_PRODUCTS_DIR}\"; exit 0; fi\nDST_DIR=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Library/SystemExtensions\"\nmkdir -p \"$DST_DIR\"\nrm -rf \"${DST_DIR}/$(basename \"$EXT_BUNDLE\")\"\ncp -R \"$EXT_BUNDLE\" \"$DST_DIR/\"\necho \"Embedded $(basename \"$EXT_BUNDLE\")\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32142A01016CAFD762321049 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A280272DC16F3BA81FC45A92 /* DeviceSource.swift in Sources */,
+				2BD802834809E431A438EBDB /* ProviderSource.swift in Sources */,
+				91644536ED898339E557C662 /* StreamSource.swift in Sources */,
+				670A72DC44F58144472AD89D /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373DCEDDCADFE8634988ABA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B9D90A432D406D31E41EE4E /* ContentView.swift in Sources */,
+				B74DBECCB1F754ED815C035F /* ExtensionInstaller.swift in Sources */,
+				E9B64F0B6117C6A0B3C6B0DC /* FrameProducer.swift in Sources */,
+				77A8885EBF2E83E43C475DEB /* OpenFreezeApp.swift in Sources */,
+				FA140FD8BCCA3BD1258B2FDD /* SinkPump.swift in Sources */,
+				5A8686D6A4CEB48F4A910A71 /* StateStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21CF440E3F73E597F16A6767 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82B29A9A48405FE737FB2607 /* OpenFreezeCameraExtension */;
+			targetProxy = 6F331E016D5812A0ACBD5A0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1A5532F748EE8DF7DD72A1A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/OpenFreeze.build.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Distribution: ESBE Incorporated (2KJ8W6N44B)";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2KJ8W6N44B;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openfreeze.OpenFreeze;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		397FC321BFA4291238386528 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Distribution: ESBE Incorporated (2KJ8W6N44B)";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2KJ8W6N44B;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openfreeze.OpenFreeze.cameraextension;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		4FF12C58E22C0FF2642A0C83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		9DCDB7FACD51C88D6E2C8FDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Distribution: ESBE Incorporated (2KJ8W6N44B)";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2KJ8W6N44B;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openfreeze.OpenFreeze.cameraextension;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CE553E2A2DF7F1B47925953B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/OpenFreeze.build.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Distribution: ESBE Incorporated (2KJ8W6N44B)";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2KJ8W6N44B;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openfreeze.OpenFreeze;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E72950C18446FF0D3EEF962A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7EDDC80C8FFC494A5C41C60E /* Build configuration list for PBXNativeTarget "OpenFreeze" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A5532F748EE8DF7DD72A1A4 /* Debug */,
+				CE553E2A2DF7F1B47925953B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8896FF5C6FB11A7414EF2EC2 /* Build configuration list for PBXNativeTarget "OpenFreezeCameraExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DCDB7FACD51C88D6E2C8FDB /* Debug */,
+				397FC321BFA4291238386528 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		893D3182905A93611479ACD6 /* Build configuration list for PBXProject "OpenFreeze" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E72950C18446FF0D3EEF962A /* Debug */,
+				4FF12C58E22C0FF2642A0C83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A677B8E814C9052A35EFA8A0 /* Project object */;
+}

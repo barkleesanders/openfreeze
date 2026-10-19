@@ -1,0 +1,34 @@
+# Xcode
+*.xcuserdata/
+*.xcworkspace/xcuserdata/
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# xcodegen cache
+*.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Build products
+build/
+
+# DMG staging
+dmg/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Secrets — never commit
+*.p12
+*.mobileprovision
+*.keychain-db
+*.pass
+.env

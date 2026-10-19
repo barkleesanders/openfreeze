@@ -66,30 +66,36 @@ codesign --force --options runtime --sign "<Your Identity>" \
 Headless activation (for scripts): `OpenFreeze.app/Contents/MacOS/OpenFreeze
 --activate-extension`.
 
-## Provisioning requirement (important)
+## Signing requirement (important)
 
 The app needs the restricted entitlement
 `com.apple.developer.system-extension.install` to activate its camera. On
 current macOS, an app that carries this entitlement **and** embeds a system
-extension is killed at launch unless a provisioning profile authorizes the
-entitlement. Concretely:
+extension is killed at launch (SIGKILL, no crash log) unless the signature is
+backed by the right Apple-issued credential. Concretely, with only an "Apple
+Distribution" (App Store) certificate and no provisioning profile:
 
-- Without a profile, Xcode refuses to attach the entitlement at build time
-  ("requires a provisioning profile with the System Extension feature"), and
-  attaching it afterwards by re-signing makes launchd SIGKILL the app on
-  launch. This is an Apple platform policy, not a bug in this code.
+- Xcode refuses to attach the entitlement at build time ("requires a
+  provisioning profile with the System Extension feature"), and attaching it
+  afterwards by re-signing makes launchd kill the app on launch. This is Apple
+  platform policy, not a bug in this code. Verified empirically: the same
+  binary runs fine with the sysex embedded but the entitlement removed — and
+  `OSSystemExtensionManager` then fails with
+  `OSSystemExtensionErrorDomain Code=2 "Missing entitlement
+  com.apple.developer.system-extension.install"`.
 
-To ship a working build you need, from the Apple Developer portal:
+To ship a working build for direct (DMG) distribution you need, from the
+Apple Developer portal, a **Developer ID Application** certificate. That is
+the standard credential for system extensions distributed outside the App
+Store (no provisioning profile required for direct distribution). Then:
 
-1. Certificates → create a **Developer ID Application** certificate
-   (for direct DMG distribution outside the App Store).
-2. Identifiers → register the App ID `com.openfreeze.OpenFreeze` and enable
-   the **System Extension** capability.
-3. Profiles → create a **Developer ID** provisioning profile for that App ID
-   and embed it in the app at build time.
+1. Import the Developer ID certificate into the build keychain.
+2. Set `CODE_SIGN_IDENTITY` to it in `project.yml` and regenerate.
+3. Build, then attach the entitlement via the documented re-sign step.
 
-Once that is in place, build → the app launches, activation succeeds after
-the one System Settings approval, and "OpenFreeze" shows up as a camera.
+After that: install to `/Applications`, launch, approve once in System
+Settings → General → Login Items & Extensions, and "OpenFreeze" appears as a
+camera.
 
 ## Gatekeeper
 
